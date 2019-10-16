@@ -1,0 +1,6 @@
+run 'truffle migrate --reset' to compile the resources
+run 'npm run dev' to get the project started
+Notes:
+i) Creator of a project can't vote/contribute to his project
+ii) Only contributors of a project can vote
+iii) Refund can be claimed only if the project goes into failure state

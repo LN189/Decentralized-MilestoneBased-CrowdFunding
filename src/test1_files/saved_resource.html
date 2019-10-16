@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- saved from url=(0093)https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_form_horizontal_static&stacked=h -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Bootstrap Example</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./w3.css">
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  <script src="./jquery.min.js"></script>
+  <script src="./popper.min.js"></script>
+  <script src="./bootstrap.min.js"></script>
+<script>
+      var ms = 0;
+      function addMileStone(){
+        ms = ms + 1;
+        var contentToAdd = "<hr><label for=\"mt"+ms+ "\">Milestone"+ms+" Title</label>\
+                              <input type=\"text\" id=\"mt"+ms+"\" class=\"form-control\">\
+                            <label for=\"mp"+ms+ "\">Milestone"+ms+" Weightage(in %)</label>\
+                              <input type=\"number\" min=\"0\" max=\"100\" step=\"0.01\" id=\"mp"+ms+"\" class=\"form-control\">\
+                              <label for=\"md"+ms+ "\">Milestone"+ms+" deadline(in days)</label>\
+                                <input type=\"number\" min=\"0\" id=\"md"+ms+"\" class=\"form-control\">"
+        $("#form-body").append(contentToAdd);
+      }
+    </script></head>
+
+<body contenteditable="false" class="">
+
+<h1 align="center"> Crowd Funding </h1>
+    <button type="button" class="btn btn-info btn-lg mx-auto d-block" data-toggle="modal" data-target="#myModal">Start Project</button>
+    <p id="accountAddress" class="text-center"></p>
+
+      <div class="modal fade" id="myModal" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Project Details</h4>
+              <button type="button" class="close" data-dismiss="modal">×</button>
+
+            </div>
+            <div class="modal-body">
+              	<div class="md-form" id="form-body">
+                	<label for="pro_title">Title</label>
+      				<input type="text" id="pro_title" class="form-control">
+                    <label for="pro_description">Description</label>
+      				<textarea type="text" rows="5" id="pro_description" class="form-control"></textarea>
+                    <label for="pro_amount">Amount Needed</label>
+      				<input type="text" id="pro_amount" class="form-control">
+                    <label for="pro_duration">Duration(in days)</label>
+              <input type="text" id="pro_duration" class="form-control">
+              <!-- <label for="md1">Description</label>
+      				<textarea type="text" rows = "5" id="md1" class="form-control"></textarea>
+              <label for="mp1">Amount Needed</label>
+      				<input type="text" id="mp1" class="form-control">
+              <label for="md2">Description</label>
+      				<textarea type="text" rows = "5" id="md2" class="form-control"></textarea>
+              <label for="mp2">Amount Needed</label>
+      				<input type="text" id="mp2" class="form-control"> -->
+    			<hr><label for="mt1">Milestone1 Title</label>                              <input type="text" id="mt1" class="form-control">                            <label for="mp1">Milestone1 Weightage(in %)</label>                              <input type="number" min="0" max="100" step="0.01" id="mp1" class="form-control">                              <label for="md1">Milestone1 deadline(in days)</label>                                <input type="number" min="0" id="md1" class="form-control"><hr><label for="mt2">Milestone2 Title</label>                              <input type="text" id="mt2" class="form-control">                            <label for="mp2">Milestone2 Weightage(in %)</label>                              <input type="number" min="0" max="100" step="0.01" id="mp2" class="form-control">                              <label for="md2">Milestone2 deadline(in days)</label>                                <input type="number" min="0" id="md2" class="form-control"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+              <button type="button" class="btn btn-default" onclick="addMileStone()">Add Milestone</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal" onclick="App.StartProject()">SAVE</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="w3-card-4">
+            <header class="w3-container">
+              <div class="d-flex p-3" style="margin:0 0 -30px 0">
+    			<div class="p-2 flex-grow-1"><h1>Flex item 1</h1></div>
+    			<div class="p-2 ">
+                	<h3 style="margin:-5px auto;color:blue">10</h3>
+                	<h6> Days left</h6>
+                 </div>
+  			</div>
+            <hr>
+            </header>
+            <div class="w3-container">
+              <p>
+                Description Description Description Description Description Description Description 				Description Description Description Description Description Description Description 				Description Description Description Description</p>
+              <hr>
+            </div>
+            <div class="progress d-block mx-auto" style="margin: 10px auto;width:80%">
+            <div class="progress-bar " role="progressbar" style="width:40%">
+              <span class="sr-only">70% Complete</span>
+            </div>
+            </div>         
+          </div> 
+
+
+</body></html>
